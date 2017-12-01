@@ -52,11 +52,13 @@ For this dataset, we estimated the crime level in 2 buckets: High Crime tract (i
 ![Crimes_Map](https://github.com/Isidoro90/Final-Project/edit/master/chicago_crimes.png)
 
 **Panel Regression Analysis**
-Using this panel dataset, we run the following regression: 
-〖Pr⁡(Using DIVVY at station i)〗_it=α+μ_t+Xβ+(u_i+ϵ_t)
+Using this panel dataset, we run the following regression:
+
+**Pr⁡(Using DIVVY at station i)_it=α+μ_t+Xβ+(u_i+ϵ_t)**
 
 Where α is constant, μ is a constant per month (fixed effect by month), β are the parameters to estimate. 
 X is matrix of n times t rows and 9 rows: 
+
 med_income_tract
 high_income_tract
 pct_male
@@ -73,7 +75,7 @@ It is worth noting that we didn’t include fixed effects by station because inc
  
 Looking at the table we find the following significant results: 
 
-![regression_results](https://github.com/Isidoro90/Final-Project/edit/master/regression_results.png)
+![regression_results](https://github.com/Isidoro90/Final-Project/edit/master/regression_results.PNG)
 
 Medium income households are, on average, 0.7 base points more likely to use DIVVY bikes than low income households. Furthermore, High income households are, on average, 0.02 percentage points more likely to use DIVVY bikes than low income households. This result is very intuitive. It means that DIVVY bikes Engel curve, i.e. the demand of DIVVY bikes against income, is increasing, but at decreasing rates. This means that as income increases, from being low income to medium income, people start using more DIVVY bikes, but as income increases further, and perhaps people are able to afford luxury cars, the increase in DIVVY is lower compared to the medium income case. 
 There are no significant differences in the use of DIVVY bikes by gender. 
