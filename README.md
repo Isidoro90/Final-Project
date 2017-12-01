@@ -16,6 +16,8 @@ To assemble this dataset, we need to merge and join datasets from different sour
 Data 
 We merge data from the DIVVY trips (Trip Level), Station shapefile, Census tract shapefile, Income (Tract Level) and Crime (Tract Level). 
 First, we combine geo databases in to the same file using fromstationid. Each census tract has n≥0 station within it. Plotting the stations in the city, we got the following: 
+
+![alt text](https://github.com/Isidoro90/Final-Project/edit/master/plot1.pdf)
  
 Then we merge this dataset with the DIVVY trips database, using again fromstationid. With this database, that is at trip level, we calculate the probability of using a DIVVY by station and month. 
  
