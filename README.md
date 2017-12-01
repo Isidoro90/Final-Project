@@ -66,5 +66,6 @@ Looking at the distribution of the probability of DIVVY usage by station, we not
    
  
 As we can see, the linear prediction does very well for stations were the model predicted a positive probability of using DIVVY bikes and not so good for stations that are not used a lot. This suggests that some stations are not supposed to be there, according to our model. 
+
 Conclusions
 In this project we estimated the probability of using DIVVY bikes in Chicago with socio-economic factor that can affect it. This estimation is very useful as it can be a rule of thumb on where to put a new station in the city. Our results show that the stations with very high demand are well captured in our estimation. However, our estimation points that stations with very low demand should be there and perhaps reallocate where the socio-economics characteristics forecast a better spot. 
