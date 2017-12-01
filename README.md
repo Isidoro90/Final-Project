@@ -1,6 +1,8 @@
 # Final-Project
 This is the repository for the final project of Isidoro Garcia and Umer Naeem 
-The determinants of DIVVY bike use
+
+#The determinants of DIVVY bike use
+
 The usage of alternative transportation means like DIVVY bikes has increased steadily in recent years. As a result, it’s important to for the DIVVY system to have a nourished network of stations, so that users are able to use DIVVY without station constraints. In this project, we aim to identify the factors that DIVVY bikes’ demand by station. To do this, we estimate the probability of using a DIVVY at the station level and regress it to weather, geographical and socio-economic factors. In the end, this factor regression results could be useful to identify the most important factors of DIVVY demand and to assess whether a new station location is a good idea or not.
 We believe that the following factors are the most important for DIVVY bikes demand: 
 	Distance from origin to destination station, since biking involves physical effort. 
