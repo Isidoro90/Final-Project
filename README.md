@@ -14,7 +14,7 @@ We believe that the following factors are the most important for DIVVY bikes dem
 	Gender
 To assemble this dataset, we need to merge and join datasets from different sources. 
 Data 
-We merge data from the DIVVY trips (Trip Level), Station shapefile, Census tract shapefile, Income (Tract Level) and Crime (Tract Level). 
+We merge data from the DIVVY trips (Trip Level), Station shapefile, Census tract shapefile (https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Census-Tracts-2010/5jrd-6zik/data), Income (Tract Level) and Crime (Tract Level). 
 First, we combine geo databases in to the same file using fromstationid. Each census tract has n≥0 station within it. Plotting the stations in the city, we got the following: 
 
 ![Tracts](https://github.com/Isidoro90/Final-Project/edit/master/chicago_tract.png)
@@ -36,7 +36,7 @@ Finally, we merge this database with income at the census tract level and crime 
 
 ### **Data**
 **DIVVY TRIPS**
-We downloaded data for all the DIVVY bike trips in Chicago during 2016. This trip level database that includes: type of user, gender, age, location of the starting station, location of the final station and start and end times of the trips. 
+We downloaded data for all the DIVVY bike trips in Chicago during 2016 (source: https://data.cityofchicago.org/Transportation/Divvy-Trips-Dashboard/u94x-unre), which contains 3.5 M trips for that year. This trip level database that includes: type of user, gender, age, location of the starting station, location of the final station and start and end times of the trips. 
 	We used the location to estimate the distance per trip and the start and end times to estimate the duration per trip.
 	We calculate the month by manipulating the start and end time variables. 
 	We calculated the probability of using a bike in the i station in month t. 
@@ -45,11 +45,12 @@ We downloaded data for all the DIVVY bike trips in Chicago during 2016. This tri
 ![Distribution_of_trips_dayhour](https://github.com/Isidoro90/Final-Project/edit/master/start_time_graph.png)
  
 **INCOME LEVEL DATA**
-In this dataset, we divided the income in three buckets: Low, Medium and High income using 30th and 60th percentiles, respectively. 
-CRIME DATA 
-For this dataset, we estimated the crime level in 2 buckets: High Crime tract (iff Crime level at that tract is higher than the median crime level at Chicago). 
+We downloaded income data from the US census (source: https://www.census.gov/research/data/planning_database/2015/). In this dataset at the census tract level, we divided the income in three buckets: Low, Medium and High income using 30th and 60th percentiles, respectively. 
 
-![Crimes_Map](https://github.com/Isidoro90/Final-Project/edit/master/chicago_crimes.png)
+**CRIME DATA** 
+This data, dowloaded from the city of chicago web page (https://data.cityofchicago.org/view/5cd6-ry5g), contains crimes at the census tract level. In this dataset, we estimated the crime level in 2 buckets: High Crime tract (iff Crime level at that tract is higher than the median crime level at Chicago). 
+
+![Crimes_Map](https://github.com/Isidoro90/Final-Project/edit/master/crimes_in_tract.png)
 
 **Panel Regression Analysis**
 Using this panel dataset, we run the following regression:
